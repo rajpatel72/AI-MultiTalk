@@ -1,6 +1,11 @@
 import streamlit as st
 import subprocess
 from pathlib import Path
+import os
+
+if not Path("MeiGen-MultiTalk").exists():
+    os.system("git lfs install")
+    os.system("git clone https://huggingface.co/MeiGen-AI/MeiGen-MultiTalk")
 
 st.title("🎥 MeiGen AI - Talking Avatar Generator")
 
